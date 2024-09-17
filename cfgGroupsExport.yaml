@@ -80,7 +80,7 @@ items:
     process_profile:
       baseline: zero-drift
     target:
-      policymode: Protect
+      policymode: Monitor
       selector:
         comment: ""
         criteria:
