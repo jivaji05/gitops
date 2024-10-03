@@ -13,6 +13,10 @@ items:
     file: []
     ingress: []
     process:
+    - action: deny
+      allow_update: false
+      name: apt
+      path: /bin/apt
     - action: allow
       allow_update: false
       name: bash
@@ -44,12 +48,12 @@ items:
       selector:
         comment: ""
         criteria:
-        - key: service
-          op: =
-          value: nginx-deployment.gitops
         - key: domain
           op: =
           value: gitops
+        - key: service
+          op: =
+          value: nginx-deployment.gitops
         name: nv.nginx-deployment.gitops
         original_name: ""
     waf:
